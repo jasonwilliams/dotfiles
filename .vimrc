@@ -2,8 +2,6 @@ syntax on
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-set path+=$PWD/**
-set suffixesadd+=.js
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -15,11 +13,11 @@ let g:rehash256 = 1
 let g:gruvbox_italic=0
 Bundle 'morhetz/gruvbox'
 Bundle "pangloss/vim-javascript"
+Plugin 'wting/rust.vim'
+Plugin 'majutsushi/tagbar'
 Plugin 'ctrlpvim/ctrlp.vim'
-Bundle 'tomasr/molokai'
-Plugin 'elzr/vim-json'
-Plugin 'fatih/vim-go'
-Plugin 'rust-lang/rust.vim'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'editorconfig/editorconfig-vim'
 
 " All of your Plugins must be added before the following line
@@ -39,4 +37,3 @@ filetype plugin indent on    " required
 colorscheme molokai
 set background=dark
 set backspace=2
-highlight lineNr ctermfg=grey
