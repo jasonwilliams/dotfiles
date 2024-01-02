@@ -1,0 +1,19 @@
+theme = "sonokai"
+
+# At most one section each of 'keys.normal', 'keys.insert' and 'keys.select'
+[keys.normal]
+# C-s = ":w" # Maps Ctrl-s to the typable command :w which is an alias for :write (save file)
+a = "move_char_left" # Maps the 'a' key to the move_char_left command
+"C-S-esc" = "extend_line" # Maps Ctrl-Shift-Escape to extend_line
+"ret" = ["open_below", "normal_mode"] # Maps the enter key to open_below then re-enter normal mode
+A-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+A-j = ["extend_to_line_bounds", "delete_selection", "move_line_down", "paste_before"]
+
+[keys.normal.space]
+l = ":toggle lsp.display-inlay-hints"
+o = ":open C:\\Users\\jwilliams720\\AppData\\Roaming\\helix\\config.toml" # Maps Ctrl-o to opening of the helix config file
+
+[keys.insert]
+"A-x" = "normal_mode"     # Maps Alt-X to enter normal mode
+j = { k = "normal_mode" } # Maps `jk` to exit insert mode
+
